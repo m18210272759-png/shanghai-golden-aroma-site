@@ -306,19 +306,16 @@ export default function ShanghaiGoldenAromaWebsite() {
           <div className="mx-auto grid max-w-7xl gap-6 px-6 py-16 lg:grid-cols-3 lg:px-8">
             <div className="lg:col-span-2">
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-red-700">Order Online</p>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Built for both dine-in guests and delivery customers.</h2>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Order online for pickup or delivery.</h2>
               <p className="mt-4 max-w-2xl text-base leading-7 text-neutral-600">
-                Order directly through our delivery platforms and enjoy our dishes from home.
+                享受我们的外卖服务，足不出户品尝地道上海美食。
               </p>
             </div>
             <div className="rounded-3xl bg-neutral-50 p-6 ring-1 ring-neutral-200">
-              <p className="text-sm font-semibold text-neutral-500">Order Now</p>
+              <p className="text-sm font-semibold text-neutral-500">Order Now 立即下单</p>
               <div className="mt-4 space-y-3">
                 <a href="https://www.fantuanorder.com/zh-CN/store/Restaurant/ca-1728777131" target="_blank" rel="noreferrer" className="block rounded-2xl bg-red-700 px-4 py-3 text-center text-sm font-semibold text-white">
-                  Order on Fantuan 饭团
-                </a>
-                <a href="#" className="block rounded-2xl border border-neutral-300 bg-white px-4 py-3 text-center text-sm font-semibold text-neutral-900">
-                  View Full Menu PDF
+                  Order on Fantuan 饭团外卖
                 </a>
               </div>
             </div>
@@ -356,14 +353,14 @@ export default function ShanghaiGoldenAromaWebsite() {
             </div>
 
             <div className="rounded-3xl bg-gradient-to-br from-red-700 to-amber-600 p-8 text-white shadow-sm">
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-red-100">Our Promise</p>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight">Authentic flavors, every visit.</h2>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-red-100">Why Guests Come Back 回头客的理由</p>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight">Homestyle cooking with bold Shanghai flavor.</h2>
               <ul className="mt-8 space-y-4 text-sm leading-6 text-red-50">
-                <li>✓ Designed for delivery-first traffic and mobile browsing</li>
-                <li>✓ Bilingual dish names help both local and Chinese-speaking customers</li>
-                <li>✓ Popular-item cues support faster ordering decisions</li>
-                <li>✓ Clear sections reduce scrolling friction</li>
-                <li>✓ Dine-in, takeout, and delivery all welcome</li>
+                <li>🍜 Signature braised pork — our #1 bestseller</li>
+                <li>🥢 Authentic Shanghai-style noodles and staples</li>
+                <li>🦐 Fresh seafood dishes made to order</li>
+                <li>🛵 Fast delivery through Fantuan</li>
+                <li>🏮 Warm dine-in atmosphere, perfect for family meals</li>
               </ul>
             </div>
           </div>
