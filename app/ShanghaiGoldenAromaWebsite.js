@@ -1,10 +1,6 @@
 "use client";
-import { useState } from "react";
-
-const SPICE_LEVELS = ["No Spice 不辣", "Mild 小辣", "Medium 中辣", "Hot 大辣"];
 
 function MenuItemWithPhoto({ name, price, tag, photo }) {
-  const [spice, setSpice] = useState("");
   return (
     <div className="rounded-2xl bg-white shadow-sm ring-1 ring-neutral-200 overflow-hidden">
       <img src={`/${photo}`} alt={name} className="w-full h-40 object-cover" />
@@ -14,21 +10,12 @@ function MenuItemWithPhoto({ name, price, tag, photo }) {
           <span className="text-base font-bold text-red-700 whitespace-nowrap">{price}</span>
         </div>
         {tag ? <p className="mt-1 text-xs text-neutral-500">{tag}</p> : null}
-        <select
-          value={spice}
-          onChange={(e) => setSpice(e.target.value)}
-          className="mt-3 w-full rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm text-neutral-700"
-        >
-          <option value="">🌶 Spice level 辣度</option>
-          {SPICE_LEVELS.map((s) => <option key={s} value={s}>{s}</option>)}
-        </select>
       </div>
     </div>
   );
 }
 
 function MenuItemNoPhoto({ name, price, tag }) {
-  const [spice, setSpice] = useState("");
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-neutral-200">
       <div className="flex items-start justify-between gap-2">
@@ -36,14 +23,6 @@ function MenuItemNoPhoto({ name, price, tag }) {
         <span className="text-base font-bold text-red-700 whitespace-nowrap">{price}</span>
       </div>
       {tag ? <p className="mt-1 text-xs text-neutral-500">{tag}</p> : null}
-      <select
-        value={spice}
-        onChange={(e) => setSpice(e.target.value)}
-        className="mt-3 w-full rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm text-neutral-700"
-      >
-        <option value="">🌶 Spice level 辣度</option>
-        {SPICE_LEVELS.map((s) => <option key={s} value={s}>{s}</option>)}
-      </select>
     </div>
   );
 }
@@ -64,7 +43,7 @@ export default function ShanghaiGoldenAromaWebsite() {
   const coldWithPhoto = [
     { name: "Century Egg Tofu 皮蛋拌豆腐", price: "$10.99", tag: "月售50+", photo: "皮蛋拌豆腐.png" },
     { name: "Cilantro Pig Ear 香菜猪耳", price: "$11.99", tag: "月售50+", photo: "香菜猪耳.jpg" },
-    { name: "Hot Enoki Mushroom 热炝金针菇", price: "$9.99", tag: "", photo: "热炝金针菇.png" },
+    { name: "Hot Enoki Mushroom 热炝金针菇", price: "$9.99", tag: "", photo: "热呛金针菇.png" },
     { name: "Special Spinach Salad 特色拌菠菜", price: "$9.99", tag: "月售50+", photo: "特色拌菠菜.jpg" },
     { name: "Aged Vinegar Peanuts 老醋花生", price: "$8.99", tag: "", photo: "老醋花生.png" },
     { name: "Mustard Black Fungus 芥酱黑木耳", price: "$8.99", tag: "", photo: "芥酱黑木耳.png" },
@@ -182,7 +161,10 @@ export default function ShanghaiGoldenAromaWebsite() {
             <div className="max-w-2xl mb-10">
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-red-700">Menu 菜单</p>
               <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Our full menu.</h2>
-              <p className="mt-3 text-base text-neutral-500">所有菜品均可选择辣度 · All dishes available with spice preference</p>
+              <div className="mt-4 inline-flex items-center gap-3 rounded-2xl border border-red-200 bg-red-50 px-5 py-3">
+                <span className="text-xl">🌶</span>
+                <p className="text-sm font-medium text-red-700">所有菜均可选辣度 · No Spice 不辣 / Mild 小辣 / Medium 中辣 / Hot 大辣 — please note when ordering 下单时请备注</p>
+              </div>
             </div>
 
             <div className="mb-12">
